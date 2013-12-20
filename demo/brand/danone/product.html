@@ -811,7 +811,8 @@ $(document).ready(function(){       initHeader('/Mes-Marques/ACTIVIA');
                                         // init the CJ Javascript SDK
                                         CJ.init({
                                             shopId : 13,    // Write here your Shop ID
-                                            auto : true     // Parse tags on this page
+                                            auto : true,     // Parse tags on this page
+                                            verbose: 100
                                         });
                                     };
                                     // Load the SDK's source Asynchronously
@@ -820,13 +821,16 @@ $(document).ready(function(){       initHeader('/Mes-Marques/ACTIVIA');
                                         if (d.getElementById(id)) {return;}
                                         js = d.createElement('script'), js.id = id, js.async = true, js.defer = true;
                                         js.type = "text/javascript", js.charset = "utf-8";
-                                        js.src = (document.protocol === 'http:') ? "http://prod.sdk.assets.chefjerome.com/js/api/sdk/sep/shop/cj-sdk-v1.js?"+(new Date()).getTime() : "https://ssl.chefjerome.com/static/js/api/sdk/sep/shop/cj-sdk-v1.js?"+(new Date()).getTime();
+                                        js.src = "http://assets.chefjerome.com/sdk/v1/cj-sdk.js?"+(new Date()).getTime();
                                         ref.parentNode.insertBefore(js, ref);
                                     }(document));
                                     //]]>
                                 </script>
 
-                                <div class="cj_button" data-cj-productinshop_refoutput="4FD7C1F0322547C0E10F80000A0B15D1E0CE37975845EFF1BB7F001EC9DBA41C">
+                                <!-- <div class="cj_button" data-cj-productinshop_refoutput="4FD7C1F0322547C0E10F80000A0B15D1E0CE37975845EFF1BB7F001EC9DBA41C">
+                                </div> -->
+                                <div class="cj_button2" data-cj-productinshop_shortidout="4E5E0449491D4650E10080000A0B15D1E0CE3DD6F74EECF1BB7F001EC9DBA41C"
+                                data-cj-productinshop_shopshortid="18">
                                     <!-- The button will appear here. -->
                                 </div>
                             </div>
